@@ -626,33 +626,47 @@
     </section>
 
     <!-- RESEÑAS -->
-    <section id="resenas" class="section">
-      <div class="container">
-        <div class="reveal">
-          <span class="eyebrow">Reseñas</span>
-          <h2>Confianza construida sesión a sesión.</h2>
-          <p class="muted">Valoración publicada: 4,3 sobre 5 (77 reseñas).</p>
-        </div>
+<section id="resenas" class="section reviews-bg">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Reseñas</span>
+      <h2>Confianza construida sesión a sesión.</h2>
+      <p class="muted">Valoración publicada: 4,3 sobre 5 (77 reseñas).</p>
+    </div>
 
-        <div class="reviews">
-          <article class="review reveal">
-            <p class="stars">★★★★★</p>
-            <p>“10 de 10. Trato estupendo y trabajo excelente.”</p>
-            <p class="muted">— Paciente</p>
-          </article>
-          <article class="review reveal">
-            <p class="stars">★★★★★</p>
-            <p>“Más de 10 años usando sus servicios y encantada.”</p>
-            <p class="muted">— Paciente</p>
-          </article>
-          <article class="review reveal">
-            <p class="stars">★★★★★</p>
-            <p>“Profesionales muy atentas y buena relación calidad-precio.”</p>
-            <p class="muted">— Paciente</p>
-          </article>
+    <div class="reviews-slider reveal" aria-live="polite">
+      <article class="review-slide active" data-index="0">
+        <div class="review">
+          <p class="stars">★★★★★</p>
+          <p>“10 de 10. Trato estupendo y trabajo excelente. Me atendieron genial.”</p>
+          <p class="muted">— Paciente · reseña pública</p>
         </div>
-      </div>
-    </section>
+      </article>
+
+      <article class="review-slide" data-index="1" aria-hidden="true">
+        <div class="review">
+          <p class="stars">★★★★★</p>
+          <p>“Llevo más de 10 años utilizando sus servicios y estoy encantada.”</p>
+          <p class="muted">— Paciente · reseña pública</p>
+        </div>
+      </article>
+
+      <article class="review-slide" data-index="2" aria-hidden="true">
+        <div class="review">
+          <p class="stars">★★★★★</p>
+          <p>“Las fisioterapeutas que me atendieron fueron una maravilla. Muy recomendable.”</p>
+          <p class="muted">— Paciente · reseña pública</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="reviews-dots" aria-label="Selector de reseñas">
+      <button class="review-dot active" type="button" data-go="0" aria-label="Ver reseña 1"></button>
+      <button class="review-dot" type="button" data-go="1" aria-label="Ver reseña 2"></button>
+      <button class="review-dot" type="button" data-go="2" aria-label="Ver reseña 3"></button>
+    </div>
+  </div>
+</section>
 
     <!-- POR QUÉ -->
     <section class="section">
