@@ -1,247 +1,193 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fisioterapia en Albacete | FISIOCEN ALBACETE S.L.</title>
-  <meta name="description" content="FISIOCEN ALBACETE S.L., fisioterapia y rehabilitación en Albacete. 4,3/5 en 77 reseñas públicas de Google. Llamar ahora y cómo llegar." />
-  <meta name="robots" content="index,follow" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Fisioterapia en Albacete | FISIOCEN ALBACETE S.L." />
-  <meta property="og:description" content="Clínica de fisioterapia y rehabilitación en Albacete. 4,3/5 en 77 reseñas públicas de Google." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" />
-  <meta name="theme-color" content="#0ea5e9" />
-  <link rel="stylesheet" href="./styles.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "additionalType": "https://schema.org/Physiotherapy",
-    "name": "FISIOCEN ALBACETE S.L.",
-    "telephone": "+34 967 22 55 34",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "C. Cristóbal Pérez Pastor, 33",
-      "postalCode": "02004",
-      "addressLocality": "Albacete",
-      "addressCountry": "ES"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.3",
-      "ratingCount": "77"
-    }
-  }
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a href="#top" class="brand" aria-label="Inicio">
-        <span class="brand-main">FISIOCEN</span>
-        <span class="brand-sub">ALBACETE</span>
-      </a>
+    <!-- SEO local -->
+    <title>Fisioterapia en Albacete | FISIOCEN ALBACETE S.L.</title>
+    <meta
+      name="description"
+      content="Fisioterapia en Albacete. FISIOCEN ALBACETE S.L. en C. Cristóbal Pérez Pastor, 33. Llama ahora al 967 22 55 34 y consulta cómo llegar."
+    />
+    <meta name="theme-color" content="#1f5f8b" />
 
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- Open Graph básico -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Fisioterapia en Albacete | FISIOCEN ALBACETE S.L." />
+    <meta
+      property="og:description"
+      content="Clínica de fisioterapia y rehabilitación en Albacete. Contacto directo y ubicación clara."
+    />
 
-      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre">Sobre nosotros</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#resenas">Reseñas</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
 
-      <a class="btn btn-primary btn-top" href="tel:+34967225534">Llamar</a>
-    </div>
-  </header>
+    <!-- Schema.org LocalBusiness / Physiotherapy -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "MedicalBusiness"],
+        "additionalType": "https://schema.org/Physiotherapy",
+        "name": "FISIOCEN ALBACETE S.L.",
+        "legalName": "FISIOCEN ALBACETE S.L.",
+        "description": "Clínica de fisioterapia y rehabilitación en Albacete.",
+        "telephone": "+34 967 22 55 34",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "C. Cristóbal Pérez Pastor, 33",
+          "postalCode": "02004",
+          "addressLocality": "Albacete",
+          "addressCountry": "ES"
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=C.%20Crist%C3%B3bal%20P%C3%A9rez%20Pastor%2C%2033%2C%2002004%20Albacete",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.3",
+          "reviewCount": "77"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <main id="main">
-    <section id="inicio" class="hero">
-      <div class="hero-gradient"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">FISIOCEN ALBACETE S.L.</p>
-          <h1>Recupera tu movimiento,<br><span>recupera tu vida.</span></h1>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">FISIOCEN ALBACETE S.L.</a>
+        <nav aria-label="Navegación principal">
+          <ul class="nav-list">
+            <li><a href="#sobre">Sobre la clínica</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#resenas">Reseñas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- HERO -->
+      <section id="inicio" class="section hero">
+        <div class="container">
+          <p class="eyebrow">Fisioterapia en Albacete</p>
+          <h1>FISIOCEN ALBACETE S.L.</h1>
           <p class="lead">
-            Fisioterapia y rehabilitación en Albacete con atención clara y directa.
-            <strong>4,3/5 en 77 reseñas públicas de Google.</strong>
+            Fisioterapia y rehabilitación en Albacete. Contacto directo para resolver tu consulta y pedir cita por teléfono.
           </p>
 
-          <div class="quick-badges" aria-label="Datos rápidos">
-            <span>📍 C. Cristóbal Pérez Pastor, 33</span>
-            <span>📞 967 22 55 34</span>
-            <span>⭐ 4,3/5 · 77 reseñas</span>
-          </div>
-
-          <div class="cta-row">
-            <a class="btn btn-primary" href="tel:+34967225534">Llamar ahora</a>
-            <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer"
-               href="https://www.google.com/maps/search/?api=1&query=C.%20Crist%C3%B3bal%20P%C3%A9rez%20Pastor%2C%2033%2C%2002004%20Albacete">
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:967225534" aria-label="Llamar ahora al 967 22 55 34">
+              Llamar ahora
+            </a>
+            <a
+              class="btn btn-secondary"
+              href="https://www.google.com/maps/search/?api=1&query=C.%20Crist%C3%B3bal%20P%C3%A9rez%20Pastor%2C%2033%2C%2002004%20Albacete"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir cómo llegar en Google Maps"
+            >
               Cómo llegar
             </a>
           </div>
+
+          <ul class="hero-metrics" aria-label="Datos destacados">
+            <li><strong>Valoración:</strong> 4,3/5</li>
+            <li><strong>Reseñas:</strong> 77</li>
+            <li><strong>Ubicación:</strong> Albacete</li>
+          </ul>
         </div>
+      </section>
 
-        <figure class="hero-media reveal" aria-label="Imagen de fisioterapia">
-          <img
-            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80"
-            alt="Profesional sanitario atendiendo a un paciente"
-            loading="eager"
-            decoding="async"
-            width="1200"
-            height="800" />
-          <figcaption>
-            Fisioterapia y rehabilitación en Albacete
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="contact-strip">
-      <div class="container strip-grid reveal">
-        <article class="mini-card">
-          <h2>Dirección</h2>
-          <p>C. Cristóbal Pérez Pastor, 33<br />02004 Albacete</p>
-        </article>
-        <article class="mini-card">
-          <h2>Teléfono</h2>
-          <p><a href="tel:+34967225534">967 22 55 34</a></p>
-        </article>
-        <article class="mini-card">
-          <h2>Código de ubicación</h2>
-          <p>X4VP+RM Albacete</p>
-        </article>
-        <article class="mini-card">
-          <h2>Horario</h2>
-          <p>Información no disponible</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="sobre" class="section section-soft">
-      <div class="container about-grid reveal">
-        <div>
-          <p class="eyebrow">Sobre la clínica</p>
-          <h2>Fisioterapia y rehabilitación en el centro de Albacete</h2>
+      <!-- SOBRE -->
+      <section id="sobre" class="section">
+        <div class="container narrow">
+          <h2>Sobre la clínica</h2>
           <p>
-            FISIOCEN ALBACETE S.L. está ubicada en C. Cristóbal Pérez Pastor, 33.
-            Su actividad pública se centra en fisioterapia y rehabilitación.
+            FISIOCEN ALBACETE S.L. es una clínica de fisioterapia y rehabilitación ubicada en Albacete.
+            Esta web está enfocada en facilitar contacto rápido por teléfono y acceso directo a la ubicación.
           </p>
         </div>
-        <div class="about-box">
-          <h3>Información disponible</h3>
-          <ul>
-            <li>Nombre comercial: FISIOCEN ALBACETE S.L.</li>
-            <li>Sector: Fisioterapia / Rehabilitación</li>
-            <li>Valoración pública: 4,3/5 (77 reseñas)</li>
-            <li>Sitio web: Información no disponible</li>
-          </ul>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section id="servicios" class="section section-alt">
+        <div class="container">
+          <h2>Servicios</h2>
+          <div class="grid-2">
+            <article class="card">
+              <h3>Fisioterapia</h3>
+              <p>Información de detalle: Información no disponible.</p>
+            </article>
+            <article class="card">
+              <h3>Rehabilitación</h3>
+              <p>Información de detalle: Información no disponible.</p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="servicios" class="section">
-      <div class="container reveal">
-        <p class="eyebrow">Servicios</p>
-        <h2>Áreas de atención</h2>
-        <p class="section-lead">
-          Se muestran únicamente categorías confirmadas.
-        </p>
-        <div class="cards two-cols">
-          <article class="card">
-            <h3>Fisioterapia</h3>
-            <p>Atención en fisioterapia.</p>
-          </article>
-          <article class="card">
-            <h3>Rehabilitación</h3>
-            <p>Atención en rehabilitación.</p>
-          </article>
+      <!-- RESEÑAS -->
+      <section id="resenas" class="section">
+        <div class="container">
+          <h2>Reseñas</h2>
+          <p class="rating"><strong>4,3/5</strong> basado en <strong>77 reseñas</strong> públicas de Google.</p>
+
+          <div class="grid-3">
+            <blockquote class="card quote">
+              <p>“Siempre buscando lo mejor y haciendo malabares para atender a los pacientes.”</p>
+            </blockquote>
+            <blockquote class="card quote">
+              <p>“Llevo más de 10 años utilizando sus servicios y estoy encantada ❤️”</p>
+            </blockquote>
+            <blockquote class="card quote">
+              <p>“Lidia muy atenta y simpática en su trabajo también !”</p>
+            </blockquote>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="resenas" class="section section-soft">
-      <div class="container reveal">
-        <p class="eyebrow">Reseñas</p>
-        <h2>Opiniones públicas en Google</h2>
+      <!-- CONTACTO -->
+      <section id="contacto" class="section section-alt">
+        <div class="container">
+          <h2>Contacto</h2>
 
-        <div class="score">
-          <strong>4,3</strong>
-          <span>★★★★☆</span>
-          <p>77 reseñas en Google</p>
-        </div>
+          <div class="contact-card">
+            <p><strong>Dirección:</strong> C. Cristóbal Pérez Pastor, 33, 02004 Albacete</p>
+            <p>
+              <strong>Teléfono:</strong>
+              <a href="tel:967225534" aria-label="Llamar al 967 22 55 34">967 22 55 34</a>
+            </p>
+            <p><strong>Código de ubicación:</strong> X4VP+RM Albacete</p>
+            <p><strong>Email:</strong> Información no disponible</p>
+            <p><strong>Horario:</strong> Información no disponible</p>
 
-        <div class="cards three-cols">
-          <blockquote class="card quote">
-            <p>“Siempre buscando lo mejor y haciendo malabares para atender a los pacientes.”</p>
-            <footer>Reseña pública de Google</footer>
-          </blockquote>
-          <blockquote class="card quote">
-            <p>“Llevo más de 10 años utilizando sus servicios y estoy encantada ❤️”</p>
-            <footer>Reseña pública de Google</footer>
-          </blockquote>
-          <blockquote class="card quote">
-            <p>“Lidia muy atenta y simpática en su trabajo también !”</p>
-            <footer>Reseña pública de Google</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto" class="section">
-      <div class="container contact-grid reveal">
-        <div>
-          <p class="eyebrow">Contacto</p>
-          <h2>Visítanos o llámanos</h2>
-          <ul class="contact-list">
-            <li><span>Dirección</span><p>C. Cristóbal Pérez Pastor, 33<br>02004 Albacete</p></li>
-            <li><span>Teléfono</span><p><a href="tel:+34967225534">967 22 55 34</a></p></li>
-            <li><span>Código de ubicación</span><p>X4VP+RM Albacete</p></li>
-            <li><span>Email</span><p>Información no disponible</p></li>
-            <li><span>Sitio web</span><p>Información no disponible</p></li>
-          </ul>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="tel:+34967225534">Llamar ahora</a>
-            <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer"
-               href="https://www.google.com/maps/search/?api=1&query=C.%20Crist%C3%B3bal%20P%C3%A9rez%20Pastor%2C%2033%2C%2002004%20Albacete">
+            <a
+              class="btn btn-primary"
+              href="https://www.google.com/maps/search/?api=1&query=C.%20Crist%C3%B3bal%20P%C3%A9rez%20Pastor%2C%2033%2C%2002004%20Albacete"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Cómo llegar
             </a>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="map-card">
-          <iframe
-            title="Mapa de FISIOCEN ALBACETE S.L."
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=C.%20Crist%C3%B3bal%20P%C3%A9rez%20Pastor%2C%2033%2C%2002004%20Albacete&output=embed">
-          </iframe>
-        </div>
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>Datos informativos. Fuente de valoración y reseñas: reseñas públicas de Google.</p>
+        <p>© <span id="year"></span> FISIOCEN ALBACETE S.L.</p>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="site-footer">
-    <div class="container footer-top">
-      <div>
-        <p class="footer-brand">FISIOCEN ALBACETE S.L.</p>
-        <p>Fisioterapia y rehabilitación</p>
-      </div>
-      <a class="btn btn-footer" href="tel:+34967225534">967 22 55 34</a>
-    </div>
-    <div class="container footer-bottom">
-      <p>
-        Información de carácter orientativo. Las reseñas mostradas provienen de valoraciones públicas de Google.
-        © <span id="year"></span> FISIOCEN ALBACETE S.L.
-      </p>
-    </div>
-  </footer>
-
-  <script src="./script.js" defer></script>
-</body>
+    <!-- Botón fijo móvil para conversión a llamada -->
+    <a class="call-fab" href="tel:967225534" aria-label="Llamar ahora">
+      Llamar ahora
+    </a>
+  </body>
 </html>
+
