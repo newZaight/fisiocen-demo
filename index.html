@@ -297,18 +297,20 @@
     }
     
     .service-media{
+      margin:0;                 /* <- clave */
       width:100%;
       height:clamp(190px, 20vw, 230px);
       overflow:hidden;
       background:#d9e7ee;
+      border:0;
     }
+    
     .service-media img{
+      display:block;            /* evita línea blanca por baseline */
       width:100%;
       height:100%;
-      display:block;
       object-fit:cover;
       object-position:center;
-      transition:transform .35s ease;
     }
     .service:hover .service-media img{
       transform:scale(1.03);
