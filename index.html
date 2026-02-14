@@ -273,15 +273,17 @@
     .services{
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:.75rem;
+      gap:1rem;
       margin-top:1rem;
     }
+
     .service{
       background:#fff;
       border:1px solid #c7d8e0;
       border-radius:14px;
-      padding:1rem;
       box-shadow:var(--shadow);
+      overflow:hidden;
+      padding:0;
       transition:transform .2s ease,border-color .2s ease, box-shadow .2s ease;
     }
     .service:hover{
@@ -289,8 +291,33 @@
       border-color:#97bfcd;
       box-shadow:0 18px 35px rgba(9,32,40,.12);
     }
+
+    .service-media{
+      width:100%;
+      aspect-ratio:16/10;
+      overflow:hidden;
+      background:#d9e7ee;
+    }
+    .service-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .35s ease;
+    }
+    .service:hover .service-media img{
+      transform:scale(1.03);
+    }
+
+    .service-body{
+      padding:.9rem .95rem 1rem;
+    }
+    .service-body h3{
+      margin:.1rem 0 .45rem;
+      font-size:1.08rem;
+    }
+
     .pill{
-      margin-top:.45rem;
+      margin-top:.5rem;
       display:inline-block;
       background:#e8f3f7;
       color:#2f5564;
@@ -300,7 +327,6 @@
       font-weight:700;
       padding:.2rem .52rem;
     }
-
     /* Reseñas (nuevo fondo + slider) */
     .reviews-bg{
       position:relative;
@@ -570,29 +596,6 @@
             <div class="item"><strong>77</strong><span>Reseñas publicadas</span></div>
             <div class="item"><strong>Centro</strong><span>C. Cristóbal Pérez Pastor, 33</span></div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PHOTO STRIP -->
-    <section class="photo-strip" aria-label="Imágenes de clínica y tratamiento">
-      <div class="container">
-        <div class="photo-grid">
-          <figure class="photo-card reveal">
-            <img src="https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?auto=format&fit=crop&w=1400&q=80"
-                 alt="Tratamiento de fisioterapia manual en espalda"
-                 loading="lazy" decoding="async" />
-          </figure>
-          <figure class="photo-card tall reveal">
-            <img src="https://images.unsplash.com/photo-1540205895360-4ad4cffb3aa8?auto=format&fit=crop&w=1400&q=80"
-                 alt="Sesión de rehabilitación en clínica de fisioterapia"
-                 loading="lazy" decoding="async" />
-          </figure>
-          <figure class="photo-card tall reveal">
-            <img src="https://images.unsplash.com/photo-1545463913-5083aa7359a6?auto=format&fit=crop&w=1400&q=80"
-                 alt="Fisioterapeuta aplicando terapia manual"
-                 loading="lazy" decoding="async" />
-          </figure>
         </div>
       </div>
     </section>
