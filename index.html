@@ -168,7 +168,6 @@
       z-index:-2;
       transform:scale(1.02);
     }
-
     .hero::after{
       content:"";
       position:absolute; inset:auto 0 0 0; height:170px;
@@ -302,21 +301,70 @@
       padding:.2rem .52rem;
     }
 
-    .reviews{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:.75rem;
-      margin-top:1rem;
+    /* Reseñas (nuevo fondo + slider) */
+    .reviews-bg{
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(100deg, rgba(7,32,40,.78), rgba(7,32,40,.62)),
+        url("https://source.unsplash.com/1800x1000/?physiotherapy,clinic,patient,care,consultation") center/cover no-repeat;
+      border-top:1px solid rgba(255,255,255,.18);
     }
+    .reviews-bg .eyebrow{ color:#bfeef4; }
+    .reviews-bg h2{ color:#fff; }
+    .reviews-bg .muted{ color:#d5e8ec; }
+
+    .reviews-slider{
+      position:relative;
+      margin-top:1rem;
+      min-height:220px;
+    }
+    .review-slide{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      transform:translateX(24px);
+      transition:opacity .55s ease, transform .55s ease;
+      pointer-events:none;
+    }
+    .review-slide.active{
+      opacity:1;
+      transform:translateX(0);
+      pointer-events:auto;
+    }
+
     .review{
-      background:#fff;
+      max-width:850px;
+      background:rgba(255,255,255,.93);
       border:1px solid #c8d9e1;
       border-radius:14px;
       padding:1rem;
-      box-shadow:var(--shadow);
+      box-shadow:0 14px 30px rgba(9,30,38,.18);
       min-height:186px;
     }
-    .stars{color:#d08c1f;font-weight:800;letter-spacing:.05em}
+    .stars{
+      color:#d08c1f;
+      font-weight:800;
+      letter-spacing:.05em;
+    }
+
+    .reviews-dots{
+      margin-top:1rem;
+      display:flex;
+      gap:.45rem;
+    }
+    .review-dot{
+      width:11px;
+      height:11px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.6);
+      background:rgba(255,255,255,.45);
+      cursor:pointer;
+    }
+    .review-dot.active{
+      background:#ffffff;
+      border-color:#ffffff;
+    }
 
     .why{
       display:grid;
@@ -454,7 +502,6 @@
     @media (max-width:1040px){
       .grid-2,.schedule-map{grid-template-columns:1fr}
       .services{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .reviews{grid-template-columns:1fr 1fr}
       .why{grid-template-columns:repeat(2,minmax(0,1fr))}
       .photo-grid{grid-template-columns:1fr 1fr}
       .trust{grid-template-columns:1fr 1fr 1fr}
@@ -463,9 +510,10 @@
     @media (max-width:740px){
       .section{padding:4rem 0}
       .nav .hide-sm{display:none}
-      .services,.reviews,.why,.photo-grid,.trust{grid-template-columns:1fr}
+      .services,.why,.photo-grid,.trust{grid-template-columns:1fr}
       .foot{grid-template-columns:1fr}
       .hero-content{padding:1.1rem}
+      .reviews-slider{ min-height:260px; }
     }
 
     @media (max-width:520px){
@@ -626,47 +674,47 @@
     </section>
 
     <!-- RESEÑAS -->
-<section id="resenas" class="section reviews-bg">
-  <div class="container">
-    <div class="reveal">
-      <span class="eyebrow">Reseñas</span>
-      <h2>Confianza construida sesión a sesión.</h2>
-      <p class="muted">Valoración publicada: 4,3 sobre 5 (77 reseñas).</p>
-    </div>
-
-    <div class="reviews-slider reveal" aria-live="polite">
-      <article class="review-slide active" data-index="0">
-        <div class="review">
-          <p class="stars">★★★★★</p>
-          <p>“10 de 10. Trato estupendo y trabajo excelente. Me atendieron genial.”</p>
-          <p class="muted">— Paciente · reseña pública</p>
+    <section id="resenas" class="section reviews-bg">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow">Reseñas</span>
+          <h2>Confianza construida sesión a sesión.</h2>
+          <p class="muted">Valoración publicada: 4,3 sobre 5 (77 reseñas).</p>
         </div>
-      </article>
 
-      <article class="review-slide" data-index="1" aria-hidden="true">
-        <div class="review">
-          <p class="stars">★★★★★</p>
-          <p>“Llevo más de 10 años utilizando sus servicios y estoy encantada.”</p>
-          <p class="muted">— Paciente · reseña pública</p>
+        <div class="reviews-slider reveal" aria-live="polite">
+          <article class="review-slide active" data-index="0">
+            <div class="review">
+              <p class="stars">★★★★★</p>
+              <p>“10 de 10. Trato estupendo y trabajo excelente. Me atendieron genial.”</p>
+              <p class="muted">— Paciente · reseña pública</p>
+            </div>
+          </article>
+
+          <article class="review-slide" data-index="1" aria-hidden="true">
+            <div class="review">
+              <p class="stars">★★★★★</p>
+              <p>“Llevo más de 10 años utilizando sus servicios y estoy encantada.”</p>
+              <p class="muted">— Paciente · reseña pública</p>
+            </div>
+          </article>
+
+          <article class="review-slide" data-index="2" aria-hidden="true">
+            <div class="review">
+              <p class="stars">★★★★★</p>
+              <p>“Las fisioterapeutas que me atendieron fueron una maravilla. Muy recomendable.”</p>
+              <p class="muted">— Paciente · reseña pública</p>
+            </div>
+          </article>
         </div>
-      </article>
 
-      <article class="review-slide" data-index="2" aria-hidden="true">
-        <div class="review">
-          <p class="stars">★★★★★</p>
-          <p>“Las fisioterapeutas que me atendieron fueron una maravilla. Muy recomendable.”</p>
-          <p class="muted">— Paciente · reseña pública</p>
+        <div class="reviews-dots" aria-label="Selector de reseñas">
+          <button class="review-dot active" type="button" data-go="0" aria-label="Ver reseña 1"></button>
+          <button class="review-dot" type="button" data-go="1" aria-label="Ver reseña 2"></button>
+          <button class="review-dot" type="button" data-go="2" aria-label="Ver reseña 3"></button>
         </div>
-      </article>
-    </div>
-
-    <div class="reviews-dots" aria-label="Selector de reseñas">
-      <button class="review-dot active" type="button" data-go="0" aria-label="Ver reseña 1"></button>
-      <button class="review-dot" type="button" data-go="1" aria-label="Ver reseña 2"></button>
-      <button class="review-dot" type="button" data-go="2" aria-label="Ver reseña 3"></button>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
     <!-- POR QUÉ -->
     <section class="section">
@@ -868,7 +916,54 @@
 
       reveal.forEach(el => io.observe(el));
     }
+
+    // Slider de reseñas
+    const reviewSlides = document.querySelectorAll(".review-slide");
+    const reviewDots = document.querySelectorAll(".review-dot");
+    let reviewIndex = 0;
+    let reviewTimer = null;
+
+    function showReview(i){
+      reviewSlides.forEach((slide, idx) => {
+        const active = idx === i;
+        slide.classList.toggle("active", active);
+        slide.setAttribute("aria-hidden", active ? "false" : "true");
+      });
+      reviewDots.forEach((dot, idx) => dot.classList.toggle("active", idx === i));
+      reviewIndex = i;
+    }
+
+    function startReviewAuto(){
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      reviewTimer = setInterval(() => {
+        const next = (reviewIndex + 1) % reviewSlides.length;
+        showReview(next);
+      }, 4500);
+    }
+
+    function stopReviewAuto(){
+      if (reviewTimer) clearInterval(reviewTimer);
+    }
+
+    reviewDots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const go = Number(dot.dataset.go);
+        showReview(go);
+        stopReviewAuto();
+        startReviewAuto();
+      });
+    });
+
+    const reviewsSlider = document.querySelector(".reviews-slider");
+    if (reviewsSlider){
+      reviewsSlider.addEventListener("mouseenter", stopReviewAuto);
+      reviewsSlider.addEventListener("mouseleave", startReviewAuto);
+    }
+
+    if (reviewSlides.length > 0){
+      showReview(0);
+      startReviewAuto();
+    }
   </script>
 </body>
 </html>
-
